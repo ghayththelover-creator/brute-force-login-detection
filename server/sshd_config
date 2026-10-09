@@ -1,0 +1,8 @@
+Port 22
+PasswordAuthentication yes
+PermitRootLogin no
+UsePAM yes
+Subsystem sftp /usr/lib/openssh/sftp-server
+SyslogFacility AUTH
+LogLevel VERBOSE
+UseDNS no

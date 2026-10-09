@@ -1,0 +1,75 @@
+# Real-traffic SSH brute-force lab. Every container is a real machine with a real IP on the
+# "labnet" bridge network, talking real SSH protocol to a real sshd. Ground truth = container role.
+#
+# Usage:
+#   docker compose up -d --scale attacker_single=1 --scale attacker_spray=1 \
+#       --scale attacker_dist=6 --scale attacker_slow=2
+#   (edit DURATION_S below first; default run length is 14 days = 1209600 s)
+#
+# To EXPORT labelled real logs once it has run long enough:
+#   docker compose exec -T sshd_server cat /var/log/auth.log > server_auth.log
+#   docker network inspect lab_labnet   # to map container IP -> role (for scenario ground truth)
+#
+services:
+  sshd_server:
+    build: ./server
+    container_name: lab_sshd
+    networks: [labnet]
+    ports: ["2222:22"]          # host:2222 -> container:22, so you can also test from Windows directly
+
+  benign_user:                  # one real "office" of users logging in realistically for DURATION_S
+    build: ./benign
+    environment:
+      TARGET_HOST: sshd_server
+      DURATION_S: "1209600"      # 14 days; set lower (e.g. 3600) for a quick smoke test
+    networks: [labnet]
+    depends_on: [sshd_server]
+
+  attacker_single:               # one source, many guesses against one user (bursts)
+    build: ./attacker
+    environment:
+      TARGET_HOST: sshd_server
+      MODE: single
+      TARGET_USERS: "alice bob carol dave erin admin root"
+      BURSTS: "70"
+      TRIES: "40"
+      GAP: "300"
+    networks: [labnet]
+    depends_on: [sshd_server]
+
+  attacker_spray:                # one source, one password, many users (bursts)
+    build: ./attacker
+    environment:
+      TARGET_HOST: sshd_server
+      MODE: spray
+      SPRAY_PW: "Summer2026"
+      BURSTS: "70"
+      GAP: "300"
+    networks: [labnet]
+    depends_on: [sshd_server]
+
+  attacker_dist:                 # SCALE this service to N containers = N real source IPs -> distributed attack
+    build: ./attacker
+    environment:
+      TARGET_HOST: sshd_server
+      MODE: single
+      TARGET_USERS: "alice bob"
+      BURSTS: "40"
+      TRIES: "10"
+      GAP: "500"
+    networks: [labnet]
+    depends_on: [sshd_server]
+
+  attacker_slow:                 # one real failed attempt every 15-75 min for DURATION_S (low-and-slow)
+    build: ./attacker
+    environment:
+      TARGET_HOST: sshd_server
+      MODE: slow
+      TARGET_USERS: "alice bob carol dave erin"
+      DURATION_S: "86400"
+    networks: [labnet]
+    depends_on: [sshd_server]
+
+networks:
+  labnet:
+    driver: bridge
