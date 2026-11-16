@@ -1,0 +1,2 @@
+attack_src_train,attack_src_val,attack_src_test,attack_src_train_and_test,attack_src_train_and_val,test_attack_windows_seen_src,test_attack_windows,events,windows,attack_windows,train,val,test,train_benign,train_distributed,train_low_and_slow,train_single_source,train_spraying,val_benign,val_distributed,val_low_and_slow,val_single_source,val_spraying,test_benign,test_distributed,test_low_and_slow,test_single_source,test_spraying
+9,9,9,9,9,312,312,10409,1062,738,515,97,450,147,228,6,64,70,39,26,1,12,19,138,195,6,59,52

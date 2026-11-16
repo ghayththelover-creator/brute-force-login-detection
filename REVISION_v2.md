@@ -19,8 +19,13 @@ Split: strict chronological 60/20/20 on window end time; no campaign re-grouping
 Real-traffic laboratory (D1.csv from label_from_lab.py):
 
 ```
-python run_real.py --data D1.csv --out results_real --seeds 10
+python run_real.py --data D1.csv --out results_real --seeds 10   # no SMOTE: attacks are the majority class
 ```
 
 `results_synth/` holds the per-run raw outputs (`*_raw.csv`) and pooled values (`numbers.json`) used in the paper.
-The hashed laboratory event table (`data/D1_hashed.csv`) is still to be added by the authors from the lab machine.
+The hashed laboratory event table is `data/D1_hashed.csv` (10,409 events; source IPs and usernames hashed).
+Its outputs (Tables 14-15 and the laboratory window/ablation analyses) are in `results_real/`:
+
+```
+python run_real.py --data data/D1_hashed.csv --out results_real --seeds 10
+```

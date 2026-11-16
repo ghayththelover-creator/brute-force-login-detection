@@ -1,0 +1,61 @@
+seed,A,B,A_right_B_wrong,B_right_A_wrong,p
+0,"XGB, stateful","XGB, single-window",0,0,1.0
+1,"XGB, stateful","XGB, single-window",0,0,1.0
+2,"XGB, stateful","XGB, single-window",0,0,1.0
+3,"XGB, stateful","XGB, single-window",0,0,1.0
+4,"XGB, stateful","XGB, single-window",0,0,1.0
+5,"XGB, stateful","XGB, single-window",0,0,1.0
+6,"XGB, stateful","XGB, single-window",0,0,1.0
+7,"XGB, stateful","XGB, single-window",0,0,1.0
+8,"XGB, stateful","XGB, single-window",0,0,1.0
+9,"XGB, stateful","XGB, single-window",0,0,1.0
+0,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+1,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+2,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+3,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+4,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+5,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+6,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+7,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+8,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+9,"XGB, single-window",Failure-count rule,22,0,4.76837158203125e-07
+0,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+1,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+2,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+3,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+4,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+5,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+6,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+7,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+8,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+9,"XGB, single-window",fail2ban-style rule,35,0,5.820766091346741e-11
+0,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+1,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+2,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+3,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+4,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+5,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+6,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+7,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+8,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+9,"XGB, single-window",Count + source-diversity rule,10,0,0.001953125
+0,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+1,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+2,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+3,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+4,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+5,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+6,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+7,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+8,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+9,"XGB, stateful",Count + diversity + history rule,9,0,0.00390625
+0,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+1,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+2,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+3,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+4,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+5,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+6,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+7,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+8,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215
+9,"LR, single-window",Failure-count rule,22,4,0.0005335211753845215

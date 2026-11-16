@@ -8,6 +8,7 @@ D1.csv columns: timestamp, source, username, outcome, label, scenario (from labe
 Outputs: real_main_raw.csv (all detectors x seeds, with TP/FP/TN/FN and per-scenario counts),
 real_windows_raw.csv (60/120/300/900 s, with and without 50% overlap), real_ablation_raw.csv,
 real_mcnemar.csv, real_split_info.csv. Strict chronological 60/20/20 split, no campaign re-grouping.
+No SMOTE: attacks are the majority class in the laboratory (about 69%).
 """
 import argparse, os, sys
 import numpy as np, pandas as pd
@@ -44,7 +45,7 @@ def main():
         X = W[cols].values.astype(float)
         for name in ('LR', 'RF', 'XGB', 'MLP', 'Tree-d3'):
             for seed in range(a.seeds):
-                _, sv, st = train_score(name, X[tr], y[tr], X[va], X[te], seed)
+                _, sv, st = train_score(name, X[tr], y[tr], X[va], X[te], seed, smote=False)
                 thr = B.best_threshold(y[va], sv); pr = (st >= thr).astype(int)
                 m = evaluate(y[te], st, pr, scen[te], unseen); m.update(seed=seed, detector=f'{name}, {fs}')
                 rows.append(m); preds[(f'{name}, {fs}', seed)] = pr
@@ -68,7 +69,7 @@ def main():
             'single-window w/o timing features': [c for c in SINGLE if c not in TIMING]}
     for nm, cols in conf.items():
         X = W[cols].values.astype(float)
-        for sm in (True, False):
+        for sm in (False,):
             for seed in range(a.seeds):
                 _, sv, st = train_score('XGB', X[tr], y[tr], X[va], X[te], seed, smote=sm)
                 thr = B.best_threshold(y[va], sv); pr = (st >= thr).astype(int)
@@ -85,7 +86,7 @@ def main():
             for fs, cols in (('single-window', SINGLE), ('stateful', STATEFUL)):
                 X = Wd[cols].values.astype(float)
                 for seed in range(a.seeds):
-                    _, sv, st = train_score('XGB', X[a_], yy[a_], X[b_], X[c_], seed)
+                    _, sv, st = train_score('XGB', X[a_], yy[a_], X[b_], X[c_], seed, smote=False)
                     thr = B.best_threshold(yy[b_], sv); pr = (st >= thr).astype(int)
                     m = evaluate(yy[c_], st, pr, sc2[c_]); m.update(seed=seed, window_s=d, overlap50=ov, features=fs,
                                                                    windows=len(Wd)); win.append(m)
