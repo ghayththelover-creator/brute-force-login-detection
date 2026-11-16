@@ -64,3 +64,10 @@ docker compose down
 - حركة المرور الطبيعية مولَّدة بجدول عشوائي واقعي (نمط يومي، كلمات مرور خاطئة أحياناً)، وليست
   سجلات مستخدمين حقيقيين فعليين، فهذا أضعف من سجلات مؤسسة حقيقية لكنه أقوى بكثير من بيانات اصطناعية
   مُولَّدة بالكامل دون أي بروتوكول أو أداة حقيقية.
+
+---
+
+## Revision v2 (reviewer round 1)
+
+Code, per-run outputs and figures behind every table of the revised paper: see [REVISION_v2.md](REVISION_v2.md),
+`results_synth/` (raw per-run CSVs and pooled `numbers.json`) and `figures/`.

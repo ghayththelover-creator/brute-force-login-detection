@@ -1,0 +1,81 @@
+run,A,B,A_right_B_wrong,B_right_A_wrong,p
+0,"XGB, stateful","XGB, single-window",213,0,1.5192908393215678e-64
+0,"XGB, single-window",Failure-count rule,180,4,3.85449987780221e-48
+0,"XGB, single-window",Count + source-diversity rule,12,4,0.076812744140625
+0,"XGB, stateful",Count + diversity + history rule,52,0,4.440892098500626e-16
+0,"XGB, stateful",fail2ban-style rule,286,0,1.608611746708759e-86
+0,"LR, single-window","XGB, single-window",0,6,0.03125
+0,"RF, stateful","RF, single-window",212,0,3.0385816786431356e-64
+0,"MLP, stateful","MLP, single-window",213,0,1.5192908393215678e-64
+1,"XGB, stateful","XGB, single-window",223,0,1.4836824602749686e-67
+1,"XGB, single-window",Failure-count rule,110,10,1.917329051435738e-22
+1,"XGB, single-window",Count + source-diversity rule,6,8,0.79052734375
+1,"XGB, stateful",Count + diversity + history rule,57,0,1.3877787807814457e-17
+1,"XGB, stateful",fail2ban-style rule,243,0,1.4149498560666738e-73
+1,"LR, single-window","XGB, single-window",0,3,0.25
+1,"RF, stateful","RF, single-window",224,0,7.418412301374843e-68
+1,"MLP, stateful","MLP, single-window",224,0,7.418412301374843e-68
+2,"XGB, stateful","XGB, single-window",218,0,4.7477838728798994e-66
+2,"XGB, single-window",Failure-count rule,165,17,1.2458763261719167e-31
+2,"XGB, single-window",Count + source-diversity rule,5,12,0.143463134765625
+2,"XGB, stateful",Count + diversity + history rule,54,0,1.1102230246251565e-16
+2,"XGB, stateful",fail2ban-style rule,269,0,2.1084395886461046e-81
+2,"LR, single-window","XGB, single-window",3,5,0.7265625
+2,"RF, stateful","RF, single-window",218,0,4.7477838728798994e-66
+2,"MLP, stateful","MLP, single-window",218,1,5.222562260167889e-64
+3,"XGB, stateful","XGB, single-window",199,0,2.4892061111444567e-60
+3,"XGB, single-window",Failure-count rule,143,7,4.330280643440687e-34
+3,"XGB, single-window",Count + source-diversity rule,3,0,0.25
+3,"XGB, stateful",Count + diversity + history rule,52,0,4.440892098500626e-16
+3,"XGB, stateful",fail2ban-style rule,238,0,4.527839539413356e-72
+3,"LR, single-window","XGB, single-window",0,2,0.5
+3,"RF, stateful","RF, single-window",199,0,2.4892061111444567e-60
+3,"MLP, stateful","MLP, single-window",200,1,1.2570490861279506e-58
+4,"XGB, stateful","XGB, single-window",195,0,3.982729777831131e-59
+4,"XGB, single-window",Failure-count rule,162,9,1.966143827196667e-37
+4,"XGB, single-window",Count + source-diversity rule,10,1,0.01171875
+4,"XGB, stateful",Count + diversity + history rule,50,0,1.7763568394002505e-15
+4,"XGB, stateful",fail2ban-style rule,473,0,8.200532357869981e-143
+4,"LR, single-window","XGB, single-window",0,4,0.125
+4,"RF, stateful","RF, single-window",196,3,3.2698211475993583e-54
+4,"MLP, stateful","MLP, single-window",196,0,1.9913648889155653e-59
+5,"XGB, stateful","XGB, single-window",197,0,9.956824444577827e-60
+5,"XGB, single-window",Failure-count rule,122,8,2.5509356165601166e-27
+5,"XGB, single-window",Count + source-diversity rule,8,8,1.0
+5,"XGB, stateful",Count + diversity + history rule,40,0,1.8189894035458565e-12
+5,"XGB, stateful",fail2ban-style rule,226,0,1.8546030753437107e-68
+5,"LR, single-window","XGB, single-window",0,2,0.5
+5,"RF, stateful","RF, single-window",198,0,4.9784122222889134e-60
+5,"MLP, stateful","MLP, single-window",199,0,2.4892061111444567e-60
+6,"XGB, stateful","XGB, single-window",208,0,4.861730685829017e-63
+6,"XGB, single-window",Failure-count rule,116,5,1.561683673969122e-28
+6,"XGB, single-window",Count + source-diversity rule,2,1,1.0
+6,"XGB, stateful",Count + diversity + history rule,43,0,2.2737367544323206e-13
+6,"XGB, stateful",fail2ban-style rule,243,0,1.4149498560666738e-73
+6,"LR, single-window","XGB, single-window",1,2,1.0
+6,"RF, stateful","RF, single-window",207,1,1.0161017133382645e-60
+6,"MLP, stateful","MLP, single-window",207,1,1.0161017133382645e-60
+7,"XGB, stateful","XGB, single-window",212,0,3.0385816786431356e-64
+7,"XGB, single-window",Failure-count rule,97,17,8.636237830169486e-15
+7,"XGB, single-window",Count + source-diversity rule,5,17,0.01690053939819336
+7,"XGB, stateful",Count + diversity + history rule,51,0,8.881784197001252e-16
+7,"XGB, stateful",fail2ban-style rule,219,0,2.3738919364399497e-66
+7,"LR, single-window","XGB, single-window",1,1,1.0
+7,"RF, stateful","RF, single-window",210,0,1.2154326714572542e-63
+7,"MLP, stateful","MLP, single-window",211,0,6.077163357286271e-64
+8,"XGB, stateful","XGB, single-window",218,0,4.7477838728798994e-66
+8,"XGB, single-window",Failure-count rule,165,15,4.0608480156227916e-33
+8,"XGB, single-window",Count + source-diversity rule,3,1,0.625
+8,"XGB, stateful",Count + diversity + history rule,55,0,5.551115123125783e-17
+8,"XGB, stateful",fail2ban-style rule,429,0,1.4426529090290212e-129
+8,"LR, single-window","XGB, single-window",1,6,0.125
+8,"RF, stateful","RF, single-window",219,0,2.3738919364399497e-66
+8,"MLP, stateful","MLP, single-window",220,0,1.1869459682199748e-66
+9,"XGB, stateful","XGB, single-window",181,0,6.525304467998525e-55
+9,"XGB, single-window",Failure-count rule,167,6,5.907683559685011e-42
+9,"XGB, single-window",Count + source-diversity rule,13,6,0.1670684814453125
+9,"XGB, stateful",Count + diversity + history rule,44,0,1.1368683772161603e-13
+9,"XGB, stateful",fail2ban-style rule,238,0,4.527839539413356e-72
+9,"LR, single-window","XGB, single-window",2,9,0.0654296875
+9,"RF, stateful","RF, single-window",181,1,5.97065358821865e-53
+9,"MLP, stateful","MLP, single-window",181,2,2.746663783192279e-51
