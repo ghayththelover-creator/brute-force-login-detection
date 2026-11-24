@@ -1,0 +1,3 @@
+precision,recall,f1,fpr,mcc,roc_auc,pr_auc,tpr_at_fpr1,tpr_at_fpr01,alerts_per_10k_benign,rec_distributed,rec_low_and_slow,rec_single_source,rec_spraying,TP,FP,FN,TN,n_single_source,det_single_source,n_spraying,det_spraying,n_distributed,det_distributed,n_low_and_slow,det_low_and_slow,detector,params,fpr_ci_low,fpr_ci_high,stump_threshold,val_accuracy,n_val
+1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,312,0,0,138,59,59,52,52,195,195,6,6,Zero-success rule (success_count = 0),success_count == 0,0.0,0.026376899340961442,,,
+1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,312,0,0,138,59,59,52,52,195,195,6,6,Decision stump (success_count only),attack if success_count <= 0.50,0.0,0.026376899340961442,0.5,1.0,97.0
